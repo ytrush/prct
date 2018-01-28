@@ -1,0 +1,102 @@
+<html>
+	<body>
+
+		<hr><h1>Break statement</h1>
+		<script type="text/javascript">
+			<!--
+				var x = 0;
+			var xbreak = 5
+			document.write("x = " + x + ", xbreak = " + xbreak +"<br />" ) 
+			document.write("Entering the loop<br /> ");
+			while (x < 20)
+			{				
+				if (x == xbreak){
+					break; // breaks out of loop completely
+				}
+				document.write( x + "<br />");
+				x = x + 1;
+			}
+
+			document.write("Exiting the loop!<br /> ");
+			//-->
+		</script>
+
+		<hr><h1>Continue statement</h1>
+
+		<script type="text/javascript">
+			<!--
+				var x = 0;
+			var xbreak = 5
+			document.write("x = " + x + ", xbreak = " + xbreak +"<br />" ) 
+			document.write("Entering the loop<br /> ");
+
+			while (x < 10)
+			{
+				if (x == xbreak){
+					document.write("Where is " + xbreak + "? Continue <br />");
+					x++;
+					continue; // skip rest of the loop body
+				}				
+				document.write( x + "<br />");
+				x++;
+
+			}
+			document.write("Exiting the loop!<br /> ");
+			//-->
+		</script>
+
+
+		<hr><h1>Labels example 1</h1>
+		<script type="text/javascript">
+			<!--
+				document.write("Entering the loop!<br /> ");
+
+			outerloop: 
+			for (var i = 0; i < 5; i++)
+			{
+				document.write("Outerloop: i = " + i + "<br />");
+				innerloop:
+				for (var j = 0; j < 5; j++)
+				{
+					if (j > 3 ) {
+						document.write("breaking innermost if j > 3 (break;) <br />")
+						break;
+					}
+					if (i == 2) {
+						document.write("breaking innermost if i == 2 (break innermost;) <br />")
+						break innerloop; 					
+					}
+					if (i == 4) {
+						document.write("breaking outerloop if i = 4 (break outerloop;) <br />")	
+						break outerloop;
+
+					}
+					document.write("Innerloop: i = " + i + ", j = " + j + " <br />");
+				}
+			}
+
+		</script>
+
+		<hr><h1>Labels example 2</h1>
+		<script type="text/javascript">
+			<!--
+				document.write("Entering the loop! <br />");
+
+			outerloop:
+			for (var i = 0; i < 3; i++){
+				document.write("Outerloop: i = " + i + "<br />");
+				for (var j = 0; j < 5; j++){
+					if (j == 3){
+						document.write("continue outerloop if j == 3 <br />")
+						continue outerloop;
+					}
+					document.write("Innerloop: i = " + i + ", j = " + j + " <br />");
+				}
+			}
+
+			document.write("Exiting the loop! <br /> ");
+			//-->
+		</script>
+
+	</body>
+</html>

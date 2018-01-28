@@ -1,0 +1,139 @@
+<html>
+	<head>
+
+		<script type="text/javascript">
+			function sayHello()
+			{
+				document.write ("Hello there!");
+			}
+
+			function zaraIs(name, age)
+			{
+				document.write (name + " is " + age + " years old.");
+			}
+
+			function concatenate(first, last)
+			{
+				var full;
+				full = first + last;
+				return full;
+			}
+			function ZaraAli()
+			{
+				var result;
+				result = concatenate('Zara', 'Ali');
+				document.write (result );
+			}
+
+			function hypotenuse(a, b) {
+				function square(x) { return x*x; }
+				return Math.sqrt(square(a) + square(b));
+			}
+			function hypotenuse34(){
+				var result;
+				result = hypotenuse(3,4);
+				document.write ( result );
+			}
+
+			var sum = new Function("x", "y", "return x+y;");
+			function sum1020(){
+				var result;
+				result = sum(10,20);
+				document.write ( result );
+			}
+
+			var mult = function(x,y){ return x*y };
+			function mult1020(){
+				var result;
+				result = mult(10,20);
+				document.write ( result );
+			}
+
+		</script>
+
+	</head>
+
+	<body>
+		<hr><h1>Simple function </h1>
+		<p>Click the following button to call the function</p>
+		<form>
+			<input type="button" onclick="sayHello()" value="Say Hello">
+		</form>
+
+
+		<hr><h1>Function with parameters </h1>
+		<p>How old is Zara?</p>
+		<form>
+			<input type="button" onclick="zaraIs('Zara', 7)" value="Say Hello">
+		</form>
+
+
+		<hr><h1>Function with parameters and return </h1>
+		<p>Concatenate Zara and Ali:</p>
+		<form>
+			<input type="button" onclick="ZaraAli()" value="Call function">
+		</form>
+
+
+		<hr><h1> Nested function</h1>
+		<p>What is hypotenuse of 3x4?</p>
+		<form>
+			<input type="button" onclick="hypotenuse34()" value="Call Function">
+		</form>
+
+
+		<hr><h1> Anonymous function</h1>
+		<p>What is the sum of 10 and 20?</p>
+
+		<form>
+			<input type="button" onclick="sum1020()" value="Call Function">
+		</form>
+
+
+		<hr><h1>Function literal</h1>
+		<p>What is the prodcut of 10 and 20?</p>
+
+		<form>
+			<input type="button" onclick="mult1020()" value="Call Function">
+		</form>
+
+
+
+
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
